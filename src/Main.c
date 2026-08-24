@@ -31,7 +31,7 @@ CStr fileinBuffer;
 CVector filesOpen;
 
 Editor* IDE_GetText(){
-    Node* selected = scene.First;
+    Node* selected = scene.childs.First;
     return (Editor*)selected->Memory;
 }
 void IDE_File_EventHandler(void* parent,Button* b,ButtonEvent* e){
@@ -104,7 +104,7 @@ void IDE_ExecuteSelect(){
             printf("Choosen: '%s'\n",fileinBuffer);
             
             CStr name = Files_NameFull(fileinBuffer);
-            const int count = scene.size - FILE_OTHERRENDERS;
+            const int count = scene.childs.size - FILE_OTHERRENDERS;
             Scene_Add(&scene,(Button[]){ Button_New(
                 NULL,
                 name,
@@ -131,7 +131,11 @@ void IDE_ExecuteSelect(){
 }
 
 void Setup(AlxWindow* w){
-    scene = Scene_New();
+    scene = Scene_New(
+        NULL,
+        (Rect){ 0.0f,0.0f,(float)w->Width,(float)w->Height },
+        BLACK
+    );
 
 	cml = ComponentML_New(
         KeywordMap_Make((KeywordRP[]){
@@ -288,10 +292,12 @@ void Update(AlxWindow* w){
     }
 
     if(menu.trace.size == 0){
-        Scene_Update(&scene,window.Strokes,GetMouse(),GetMouseBefore());
+        Scene_Adapt(&scene,GetWidth(),GetHeight());
+        Scene_Update(&scene);
+        Scene_Input(&scene,window.Strokes,GetMouse(),GetMouseBefore());
 
-        Node* n = scene.First->Next;
-        for(int i = FILE_OTHERRENDERS;i<scene.size;i++){
+        Node* n = scene.childs.First->Next;
+        for(int i = FILE_OTHERRENDERS;i<scene.childs.size;i++){
             Renderable* rend = (Renderable*)n->Memory;
             rend->rect.p.x = 10.0f + (i - FILE_OTHERRENDERS) * FILE_WIDTH;
             n = n->Next;
