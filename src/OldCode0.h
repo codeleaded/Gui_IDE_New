@@ -2,9 +2,9 @@
 #include "/home/codeleaded/System/Static/Library/WindowEngine.h"
 #include "/home/codeleaded/System/Static/Library/ObjectNotation.h"
 
-#define SYNTAX_PATH     "/home/codeleaded/System/SyntaxFiles/Path_Syntax.alxon"
-#define SYNTAX_C        "/home/codeleaded/System/SyntaxFiles/C_Syntax.alxon"
-#define SYNTAX_OMML     "/home/codeleaded/System/SyntaxFiles/OMML_Syntax.alxon"
+#define SYNTAX_PATH     "/home/codeleaded/System/SyntaxFiles/Path_Syntax.json"
+#define SYNTAX_C        "/home/codeleaded/System/SyntaxFiles/C_Syntax.json"
+#define SYNTAX_OMML     "/home/codeleaded/System/SyntaxFiles/OMML_Syntax.json"
 
 #define EDISPLAY_SIDE_NONE          0
 #define EDISPLAY_SIDE_NORTH         1

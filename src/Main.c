@@ -11,13 +11,13 @@
 #define FILE_PADDINGX           10
 #define FILE_OTHERRENDERS       1
 
-#define FILE_SYNTAX_C           "/home/codeleaded/System/SyntaxFiles/C_Syntax.alxon"
-#define FILE_SYNTAX_CPP         "/home/codeleaded/System/SyntaxFiles/Cpp_Syntax.alxon"
-#define FILE_SYNTAX_LL          "/home/codeleaded/System/SyntaxFiles/LuaLike_Syntax.alxon"
-#define FILE_SYNTAX_VBL         "/home/codeleaded/System/SyntaxFiles/VBLike_Syntax.alxon"
-#define FILE_SYNTAX_AIX         "/home/codeleaded/System/SyntaxFiles/Aix_Syntax.alxon"
-#define FILE_SYNTAX_ALX         "/home/codeleaded/System/SyntaxFiles/Alx_Syntax.alxon"
-#define FILE_SYNTAX_OMML        "/home/codeleaded/System/SyntaxFiles/OMML_Syntax.alxon"
+#define FILE_SYNTAX_C           "/home/codeleaded/System/SyntaxFiles/C_Syntax.json"
+#define FILE_SYNTAX_CPP         "/home/codeleaded/System/SyntaxFiles/Cpp_Syntax.json"
+#define FILE_SYNTAX_LL          "/home/codeleaded/System/SyntaxFiles/LuaLike_Syntax.json"
+#define FILE_SYNTAX_VBL         "/home/codeleaded/System/SyntaxFiles/VBLike_Syntax.json"
+#define FILE_SYNTAX_AIX         "/home/codeleaded/System/SyntaxFiles/Aix_Syntax.json"
+#define FILE_SYNTAX_ALX         "/home/codeleaded/System/SyntaxFiles/Alx_Syntax.json"
+#define FILE_SYNTAX_OMML        "/home/codeleaded/System/SyntaxFiles/OMML_Syntax.json"
 #define FILE_STARTPATH          "/home/codeleaded/Hecke/C/Gui_IDE_New/code"
 
 MenuSystem menu;
